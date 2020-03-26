@@ -1,4 +1,4 @@
-package com.example.functionProgrammingPattern;
+package com.example.functionProgrammingPattern.exampleForAssignValueIntoDto;
 
 import java.util.List;
 
