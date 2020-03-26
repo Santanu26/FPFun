@@ -16,7 +16,7 @@ public class UserMapper {
         userDto.setActive(user.getDeactivationDate() == null);
 
         // set other class
-        
+
         return userDto;
     }
 }
