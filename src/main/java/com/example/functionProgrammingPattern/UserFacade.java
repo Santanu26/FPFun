@@ -12,12 +12,17 @@ public class UserFacade {
         List<UserDto> userDtos = new ArrayList<>();
 
         for (User user : users) {
-            UserDto userDto = new UserDto();
-            userDto.setFullName(user.getFirstName() + " " + user.getLastName().toUpperCase());
-            userDto.setUsername(user.getUsername());
-            userDto.setActive(user.getDeactivationDate() == null);
+            UserDto userDto = toDto(user);
             userDtos.add(userDto);
         }
         return userDtos;
+    }
+
+    private UserDto toDto(User user) {
+        UserDto userDto = new UserDto();
+        userDto.setFullName(user.getFirstName() + " " + user.getLastName().toUpperCase());
+        userDto.setUsername(user.getUsername());
+        userDto.setActive(user.getDeactivationDate() == null);
+        return userDto;
     }
 }
